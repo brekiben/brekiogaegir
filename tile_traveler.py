@@ -1,7 +1,3 @@
-#Create array function that creates an array with position x,y
-#Create check functions for checking left, right, up down
-#Create print function that prints result if check functions are true of false
-
 def north(x,y):
     if x==1 or x== 3:
         if y < 3:
