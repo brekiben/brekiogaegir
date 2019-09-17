@@ -60,17 +60,17 @@ def printsettings(x,y):
         if y ==1:
             print("(N)orth.")
     if x==1 and y==2:
-        print("(S)outh or (E)ast or (N)orth.")
+        print("(N)orth or (E)ast or (S)outh.")
     if x ==2 and y==2:
         print("(S)outh or (W)est.")
     if x ==3 and y ==2:
-        print("(N)orth or (S)outh")
+        print("(N)orth or (S)outh.")
     if x ==1 and y ==3:
-        print("(S)outh or (E)ast")
+        print("(E)ast or (S)outh.")
     if x==2 and y==3:
         print("(E)ast or (W)est.")
     if x==3 and y==3:
-        print("(S)outh or (W)est")
+        print("(S)outh or (W)est.")
 
 
 def main():
@@ -138,7 +138,7 @@ def main():
         direction = input("Direction: ")
         
 main()
-print("Victory")
+print("Victory!")
         
         
 
