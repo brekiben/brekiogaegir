@@ -86,7 +86,11 @@ def main():
             allowed = north(x,y)
             if allowed:
                 y += 1
-                printsettings(x,y)
+                victory = checkvictory(x,y)
+                if victory:
+                    break
+                else:
+                    printsettings(x,y)
             else:
                 print("Not a valid direction!")
 
@@ -94,7 +98,11 @@ def main():
             allowed = south(x,y)
             if allowed:
                 y = y-1
-                printsettings(x,y)
+                victory = checkvictory(x,y)
+                if victory:
+                    break
+                else:
+                    printsettings(x,y)
             else:
                 print("Not a valid direction!")
 
@@ -102,7 +110,11 @@ def main():
             allowed = west(x,y)
             if allowed:
                 x = x-1
-                printsettings(x,y)
+                victory = checkvictory(x,y)
+                if victory:
+                    break
+                else:
+                    printsettings(x,y)
             else:
                 print("Not a valid direction!")
 
@@ -110,7 +122,11 @@ def main():
             allowed = east(x,y)
             if allowed:
                 x += 1
-                printsettings(x,y)
+                victory = checkvictory(x,y)
+                if victory:
+                    break
+                else:
+                    printsettings(x,y)
             else:
                 print("Not a valid direction!")
 
@@ -118,11 +134,8 @@ def main():
             print("Not a valid direction!")
 
 
-        victory = checkvictory(x,y)
-        if victory:
-            break
-        else:
-            direction = input("Direction: ")
+        
+        direction = input("Direction: ")
         
 main()
 print("Victory")
