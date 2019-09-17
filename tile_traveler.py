@@ -14,28 +14,39 @@ def north(x,y):
         return False
 
 def south(x,y):
-    if x > 1:
-        if y > 1:
-            if x!=2 and y!=3:
-                return True
-    else:
-        return False
+    true_false = True
+    if y <=1:
+        true_false = False
+    if x ==2 and y==3:
+        true_false = False
+
+    return true_false
 
 def west(x,y):
-    if x>1 and y!=1:
-        if x!=3 and y!=2:
-            return True
+    true_false = True
+    if x <=1:
+        true_false = False
 
-    else:
-        return False
+    if x==3 and y ==2:
+        true_false = False
+    if x==3 and y ==1:
+        true_false = False
+    if x ==2 and y ==1:
+        true_false = False
+    return true_false
 
 def east(x,y):
-    if x !=1 and x<3:
-        if x !=2 & y!=2:
-            return True
-
-    else:
-        return False
+    true_false = True
+    if x >= 3:
+        truefalse = False
+    if x == 1 and y ==1:
+        true_false = False
+    if x==2 and y ==2:
+        true_false = False
+    if x==2 and y==1:
+        true_false = False
+    
+    return true_false
 
 def checkvictory(x,y):
     if x ==3 and y==1:
@@ -106,9 +117,15 @@ def main():
         else:
             print("Not a valid direction!")
 
-        direction = input("Direction: ")
 
+        victory = checkvictory(x,y)
+        if victory:
+            break
+        else:
+            direction = input("Direction: ")
+        
 main()
+print("Victory")
         
         
 
